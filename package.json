@@ -4,12 +4,14 @@
   "description": "Start using Webpack without setup or configuration process",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --open",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "deploy": "NODE_ENV=production webpack && gh-pages -d dist"
   },
   "author": "Nil Vila",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "0.28.7",
+    "gh-pages": "1.0.0",
     "node-sass": "4.5.3",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
