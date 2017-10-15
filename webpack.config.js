@@ -1,5 +1,6 @@
+const path = require("path");
 const webpack = require("webpack");
-//const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 var ENV = process.env.NODE_ENV;
 
@@ -11,8 +12,8 @@ var baseConfig = {
     contentBase: "./dist"
   },
   output: {
-    filename: "dist/[name].js",
-    path: __dirname
+    filename: "[name].js",
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
@@ -30,7 +31,6 @@ var baseConfig = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(ENV)
     })
-    // new UglifyJSPlugin()
   ]
 };
 
