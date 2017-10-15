@@ -1,13 +1,13 @@
 {
   "name": "simpack",
   "version": "1.0.0",
-  "description": "Use Webpack without setup process and configuration",
+  "description": "Start using Webpack without setup or configuration process",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --open",
     "build": "NODE_ENV=production webpack"
   },
   "author": "Nil Vila",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "css-loader": "0.28.7",
     "node-sass": "4.5.3",
